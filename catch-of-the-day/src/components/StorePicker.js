@@ -5,15 +5,21 @@ class StorePicker extends React.Component {
     myInput = React.createRef();
 
     //instead of bining in constructor we transformed function into property
-    goToStore = (event) => {
+    goToStore = event => {
         //stop the form from submitting
         event.preventDefault();
         //2. get the text from that input
-        console.log(this);
+        // const storeName = this.myInput;
+        const storeName = this.myInput.current.defaultValue;
+
+
+
         //3. change the page to /store/whatever-they-entered
 
+        this.props.history.push(`/store/${storeName}`);
 
-    }
+
+    };
     render() {
 
         return (
