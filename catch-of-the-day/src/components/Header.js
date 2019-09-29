@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 //remove paranthesis around props because 1 argument
 const Header = (props) => (
@@ -38,5 +39,9 @@ const Header = (props) => (
 //         );
 //     }
 // }
+
+Header.propTypes = {
+    tagline: PropTypes.string.isRequired
+}
 
 export default Header;
